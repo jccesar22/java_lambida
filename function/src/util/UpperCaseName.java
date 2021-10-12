@@ -1,5 +1,12 @@
 package util;
 
-public class UpperCaseName {
+import java.util.function.Function;
 
+import entities.Product;
+
+public class UpperCaseName  implements Function<Product, String>{
+	
+	public String apply(Product p) {
+		return p.getName().toUpperCase();
+	}
 }
